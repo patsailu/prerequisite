@@ -14,12 +14,12 @@ sudo setfacl -m "user:$USER:rw" /var/run/docker.sock
 sudo chmod 666 /var/run/docker.sock
 sudo snap install go --classic
 sudo snap install --classic code
+sudo apt install nodejs -y
+sudo apt install build-essential -y
+cd ~/$HOME
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
 sudo apt-get -y install xfce4
 sudo apt-get -y install xrdp
 sudo systemctl enable xrdp
 echo xfce4-session >~/.xsession
 sudo service xrdp restart
-sudo apt install nodejs -y
-sudo apt install build-essential -y
-cd ~/$HOME
-curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
