@@ -21,6 +21,5 @@ echo xfce4-session >~/.xsession
 sudo service xrdp restart
 sudo apt install nodejs -y
 sudo apt install build-essential -y
+cd ~/$HOME
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
