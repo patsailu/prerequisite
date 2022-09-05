@@ -12,7 +12,7 @@ sudo systemctl enable docker
 sudo gpasswd -a $USER docker
 sudo setfacl -m "user:$USER:rw" /var/run/docker.sock
 sudo chmod 666 /var/run/docker.sock
-curl -OL https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
-sha256sum go1.18.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.18.2.linux-amd64.tar.gz
+sudo snap install go --classic
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
