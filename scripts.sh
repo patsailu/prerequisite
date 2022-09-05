@@ -13,6 +13,6 @@ sudo gpasswd -a $USER docker
 sudo setfacl -m "user:$USER:rw" /var/run/docker.sock
 sudo chmod 666 /var/run/docker.sock
 sudo snap install go --classic
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
