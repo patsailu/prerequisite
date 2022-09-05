@@ -11,6 +11,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo gpasswd -a $USER docker
 sudo setfacl -m "user:$USER:rw" /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 curl -OL https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
 sha256sum go1.18.2.linux-amd64.tar.gz
 sudo tar -C /usr/local -xvf go1.18.2.linux-amd64.tar.gz
