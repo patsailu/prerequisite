@@ -14,3 +14,4 @@ sudo setfacl -m "user:$USER:rw" /var/run/docker.sock
 curl -OL https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
 sha256sum go1.18.2.linux-amd64.tar.gz
 sudo tar -C /usr/local -xvf go1.18.2.linux-amd64.tar.gz
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
