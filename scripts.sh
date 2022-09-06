@@ -18,8 +18,8 @@ sudo apt install nodejs -y
 sudo apt install build-essential -y
 cd ~
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
-sudo cp -R /var/lib/waagent/custom-script/download/0/fabric-samples $HOME
-sudo chown -R $(whoami):$(whoami) fabric-samples
+cp -R /var/lib/waagent/custom-script/download/0/fabric-samples $HOME
+chown -R $(whoami):$(whoami) fabric-samples
 sudo apt-get -y install xfce4
 sudo apt-get -y install xrdp
 sudo systemctl enable xrdp
