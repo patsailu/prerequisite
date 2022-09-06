@@ -6,7 +6,8 @@ sudo apt-get install -y curl
 sudo apt-get install -y git
 sudo apt install gnome-terminal
 sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg lsb-release docker.io docker-compose -y
+sudo apt-get install ca-certificates curl gnupg lsb-release docker.io -y
+curl -L https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo gpasswd -a $USER docker
@@ -18,8 +19,9 @@ sudo apt install nodejs -y
 sudo apt install build-essential -y
 cd ~
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
-cp -R /var/lib/waagent/custom-script/download/0/fabric-samples $HOME
-chown -R $(whoami):$(whoami) fabric-samples
+cp -R /var/lib/waagent/custom-script/download/0/fabric-samples $(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+exit
+sudo chown -R $(whoami):$(whoami) fabric-samples
 sudo apt-get -y install xfce4
 sudo apt-get -y install xrdp
 sudo systemctl enable xrdp
