@@ -19,6 +19,7 @@ sudo apt install nodejs -y
 sudo apt install build-essential -y
 cd ~
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s
+sudo su
 cp -R /var/lib/waagent/custom-script/download/0/fabric-samples $(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 exit
 sudo chown -R $(whoami):$(whoami) fabric-samples
