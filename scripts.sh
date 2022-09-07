@@ -18,7 +18,7 @@ sudo snap install go --classic
 sudo snap install --classic code
 sudo apt install nodejs -y
 sudo apt install build-essential -y
-cd ~
+cd /home/hlfuser
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh --output /home/hlfuser| bash -s 
 sudo apt-get -y install xfce4
 sudo apt-get -y install xrdp
