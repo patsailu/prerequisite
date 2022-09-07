@@ -19,7 +19,7 @@ sudo snap install --classic code
 sudo apt install nodejs -y
 sudo apt install build-essential -y
 cd ~
-curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s -o $HOME
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh| bash -s --output /home/hlfuser
 sudo apt-get -y install xfce4
 sudo apt-get -y install xrdp
 sudo systemctl enable xrdp
